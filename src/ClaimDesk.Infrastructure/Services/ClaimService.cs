@@ -30,7 +30,7 @@ public class ClaimService : IClaimService
     {
         if (!_currentUserContext.TryGetUserId(out var currentUserId))
         {
-            return [];
+            return new List<ClaimDto>();
         }
 
         IQueryable<InsuranceClaim> claims = _dbContext.InsuranceClaims.AsNoTracking();
@@ -121,8 +121,13 @@ public class ClaimService : IClaimService
         _dbContext.InsuranceClaims.Add(claim);
         await _dbContext.SaveChangesAsync(cancellationToken);
 
-        return await GetByIdAsync(claim.Id, cancellationToken)
-            ?? throw new InvalidOperationException("Created claim could not be reloaded.");
+        var createdClaim = await GetByIdAsync(claim.Id, cancellationToken);
+        if (createdClaim == null)
+        {
+            throw new InvalidOperationException("Created claim could not be reloaded.");
+        }
+
+        return createdClaim;
     }
 
     public async Task<ClaimDto?> UpdateAsync(int id, UpdateClaimRequest request, CancellationToken cancellationToken)
