@@ -25,17 +25,19 @@ The codebase includes intentional review targets for:
 
 ## Technology stack
 
-This repository starts as a **.NET 8 inherited baseline**.
+This repository starts as a **.NET 6 inherited baseline**.
 
-- .NET 8
+- .NET 6
+- C# 10 baseline syntax
 - ASP.NET Core Web API
-- Entity Framework Core 8
+- Entity Framework Core 6
 - SQLite for local development
 - xUnit and FluentAssertions
 - Newtonsoft.Json modernization target
 - System.Data.SqlClient modernization target
+- older coding constructs that can be reviewed during C# 14 modernization
 
-One of the course activities is to use AI-assisted review workflows to plan and validate modernization from .NET 8 to the current .NET version used in the course.
+One of the course activities is to use AI-assisted review workflows to assess, plan, implement, and validate modernization from .NET 6 to .NET 10 and from C# 10-era code toward current C# language features.
 
 ## Getting started
 
