@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="src/ClaimDesk.Api/ClaimDesk.Api.csproj" />
+  <Project Path="src/ClaimDesk.Application/ClaimDesk.Application.csproj" />
+  <Project Path="src/ClaimDesk.Domain/ClaimDesk.Domain.csproj" />
+  <Project Path="src/ClaimDesk.Infrastructure/ClaimDesk.Infrastructure.csproj" />
+  <Project Path="tests/ClaimDesk.UnitTests/ClaimDesk.UnitTests.csproj" />
+  <Project Path="tests/ClaimDesk.IntegrationTests/ClaimDesk.IntegrationTests.csproj" />
+</Solution>
