@@ -4,9 +4,10 @@ This repository is used for AI-assisted legacy code review training. Treat the a
 
 ## Technology expectations
 
-- The baseline application targets .NET 8.
+- The baseline application targets .NET 6 and uses C# 10-era syntax.
 - Do not upgrade projects to .NET 10 unless the modernization task explicitly asks for it.
-- When modernization is requested, plan the upgrade before changing code.
+- When modernization is requested, assess and plan the upgrade before changing code.
+- Review C# language modernization separately from behavior-changing refactoring.
 - Keep examples compatible with ASP.NET Core Web API and EF Core.
 - Prefer small, reviewable changes over broad rewrites.
 - Do not invent business rules. Flag assumptions explicitly.
@@ -24,6 +25,7 @@ When reviewing code, inspect for:
 - inconsistent error handling
 - data access risks
 - dependency and modernization risks
+- unsupported runtime risk
 - missing tests
 - regression risk
 - pull request readiness
