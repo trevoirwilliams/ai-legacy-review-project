@@ -1,0 +1,15 @@
+bin/
+obj/
+.vs/
+.vscode/
+*.user
+*.suo
+*.db
+*.sqlite
+*.sqlite3
+TestResults/
+coverage/
+*.trx
+.DS_Store
+.env
+local.settings.json
