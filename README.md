@@ -25,13 +25,17 @@ The codebase includes intentional review targets for:
 
 ## Technology stack
 
-- .NET 10
+This repository starts as a **.NET 8 inherited baseline**.
+
+- .NET 8
 - ASP.NET Core Web API
-- Entity Framework Core
+- Entity Framework Core 8
 - SQLite for local development
 - xUnit and FluentAssertions
 - Newtonsoft.Json modernization target
 - System.Data.SqlClient modernization target
+
+One of the course activities is to use AI-assisted review workflows to plan and validate modernization from .NET 8 to the current .NET version used in the course.
 
 ## Getting started
 
@@ -70,4 +74,4 @@ This header-based identity mechanism is intentionally not production-grade and i
 
 ## Important course note
 
-Do not present this project as a secure or modern reference implementation. It is a training case study. Learners should use AI to inspect it, document behavior, find risks, generate tests, and prepare evidence-backed review recommendations.
+Do not present this project as a secure or modern reference implementation. It is a training case study. Learners should use AI to inspect it, document behavior, find risks, generate tests, and prepare evidence-backed review recommendations before making modernization changes.
