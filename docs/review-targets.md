@@ -15,6 +15,7 @@ ClaimDesk Operations API includes intentional review targets for the AI-assisted
 - Validation is scattered and incomplete.
 - Status transition rules are incomplete.
 - Search and paging behavior needs review.
+- Some code intentionally uses older C# 10-era constructs that can be reviewed during modernization.
 
 ## Security and privacy
 
@@ -28,6 +29,8 @@ ClaimDesk Operations API includes intentional review targets for the AI-assisted
 
 ## Dependency and modernization
 
+- The application starts on .NET 6, which should be reviewed as an unsupported runtime baseline.
+- C# 10-era syntax provides language modernization opportunities after upgrading to .NET 10.
 - `Newtonsoft.Json` is present as a serialization modernization review target.
 - `System.Data.SqlClient` is present as a database client modernization review target.
 - Local SQLite and local file path settings can be reviewed for cloud readiness.
@@ -38,6 +41,7 @@ ClaimDesk Operations API includes intentional review targets for the AI-assisted
 - Unit tests are intentionally sparse.
 - Integration tests cover only a basic happy path.
 - There are missing tests for access control, validation, status transitions, search, paging, and error handling.
+- There are missing tests that should be added before upgrading from .NET 6 to .NET 10.
 
 ## Final workflow
 
